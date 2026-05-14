@@ -22,13 +22,15 @@ Para el proyecto se hizo uso de la IA para la creacion de imagenes y textos de l
 
 ## 📁 Estructura
 
-|──  pages/
-|    └── Contacto.html
-|──  css/
-|    ├── style.css
-|    └── contacto.css
-|── img/
+```text
+├── pages/
+│   └── contacto.html
+├── css/
+│   ├── style.css
+│   └── contacto.css
+├── img/
 └── index.html
+```
 
 
 ## 📌 Proximas mejoras
