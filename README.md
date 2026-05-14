@@ -3,10 +3,6 @@
 Este proyecto consiste en el desarrollo de un sitio web de tienda ecommerce orientado a la venta de productos de computación.
 El objetivo de la página es permitir a los usuarios navegar por el sitio y conocer los productos disponibles, contando con un diseño responsive que se adapta a distintos dispositivos.
 
-## 💻 Demo
-
-
-
 ## 🚀 Tecnologias
 
 - HTML5
