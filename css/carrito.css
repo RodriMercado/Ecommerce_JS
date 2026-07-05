@@ -167,47 +167,47 @@ th{
 /* Responsive */
 
 @media only screen and (max-width: 1024px){
-
-    .carrito-container {
-        width: 95%;
-        margin: 0 auto;
-    }
-
-    table{
-        font-size: 14px;
+    .carrito-container{
+        text-align: center;
+        padding: 10px;
     }
 
     th, td{
         padding: 8px;
+        font-size: 14px;
     }
 
     .total{
-        font-size: 12px;
+        font-size: 14px;
     }
 
-    button{
-        font-size: 12px;
-        padding: 5px 10px;
+    #vaciar-carrito{
+        font-size: 13px;
+        padding: 8px 10px;
     }
 }
 
 @media (max-width: 768px){
-
-    .carrito-container {
-        width: 95%;
-        margin: 0 auto;
+    .carrito-container{
+        text-align: center;
+        padding: 10px;
     }
 
-    table{
-        font-size: 14px;
+    h2{
+        padding: 30px 10px;
+        font-size: 22px;
     }
 
     th, td{
-        padding: 8px;
+        padding: 6px;
+        font-size: 13px;
     }
 
-    .total{
-        font-size: 12px;
+    .total-carrito{
+
+        flex-direction: end;
+        align-items: center;
+        font-size: 14px;
     }
 
     button{
@@ -217,45 +217,31 @@ th{
 }
 
 @media only screen and (max-width: 480px){
-
-    h2{
-        padding: 25px 10px;
-        font-size: 22px;
-    }
-
     .carrito-container{
-        width: 100%;
-        overflow-x: auto;
+        text-align: center;
+        padding: 10px;
     }
-
+    
     table{
-        min-width: 600px;
-        font-size: 12px;
+        font-size: 11px;
     }
 
     th, td{
-        padding: 5px;
+        padding: 4px;
+    }
+
+    .btn-eliminar{
+        padding: 5px 6px;
+        font-size: 10px;
+    }
+
+    .icon-carrito{
+        font-size: 50px;
     }
 
     #mensaje-vacio{
         width: 90%;
         height: auto;
-        font-size: 14px;
-    }
-
-    .icon-carrito{
-        font-size: 55px;
-    }
-
-    .total-carrito{
-        flex-direction: column;
-        align-items: center;
-        font-size: 14px;
-    }
-
-    #finalizar-compra,
-    #vaciar-carrito{
-        width: 100%;
-        max-width: 250px;
     }
 }
+
