@@ -7,10 +7,12 @@ El objetivo de la página es permitir a los usuarios navegar por el sitio y cono
 
 - HTML5
 - CSS3
+- JavaScript
 
 ## 🤖 Uso de IA
 
 Para el proyecto se hizo uso de la IA para la creacion de imagenes y textos de la seccion Testimonios
+
 
 ## ✨ Features
 
@@ -19,6 +21,8 @@ Para el proyecto se hizo uso de la IA para la creacion de imagenes y textos de l
 - Formulario integrado con Formspree  
 - Seccion de Reseñas con animaciones en las tarjetas
 - Grid de 3 columnas en reseñas y 4 columnas en productos
+- Implementacion del carrito de compras
+- Validaciones con Javascript
 
 ## 📁 Estructura
 
@@ -28,16 +32,15 @@ Para el proyecto se hizo uso de la IA para la creacion de imagenes y textos de l
 ├── css/
 │   ├── style.css
 │   └── contacto.css
+├── css/
+│   ├── carrito.js
+│   ├── contacto.js
+│   ├── productos.js
+│   └── script.js
 ├── img/
 └── index.html
 ```
 
-
-## 📌 Proximas mejoras
-
-- Integrar JavaScript
-- Implementar carrito de compras
-- Mejorar animaciones e interactividad
 
 ## 👨‍💻 Autor
 Rodrigo Mercado — [@RodriMercado](https://github.com/RodriMercado)

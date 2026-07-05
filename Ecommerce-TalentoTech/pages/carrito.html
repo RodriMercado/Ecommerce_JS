@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Tienda</title>
-
-    <!--------- CSS ---------->
+    <title>Productos</title>
+   <!--------- CSS ---------->
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/carrito.css">
 
     <!--------- Google Fonts ---------->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <!--------- Font Awesome ---------->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
 <body>
+    
     <!--------- Header ---------->
     <header>
         <div class="header">
@@ -47,38 +49,57 @@
         </div>
     </header>
 
-    <main>
-        <section class="contacto">
-            <h1>Contacto</h1>
-        </section>
+    <main class="carrito-container">
 
-        <div class="formulario">
+        <div id="carrito">
+            <h2>Mi Carrito</h2>
+            
+            <table border="1" id="tabla-carrito">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-carrito"></tbody>
 
-            <h2 class="form-contacto">Formulario de contacto</h2>
+            </table>
 
-            <form action="https://formspree.io/f/mdabzqej" method="POST" id="contactForm">
-                
-            <label for="nombre">Nombre</label>
-            <input id="nombre" name="nombre" placeholder="Ingrese su nombre">
-            <span class="error" id="errorNombre"></span>
+            <p id="mensaje-vacio" style="display: none;">
+                <i class="fa-solid fa-cart-arrow-down icon-carrito"></i>
+                Tu carrito esta vacio
+            </p>
 
-            <label for="email">Email</label>
-            <input id="email" name="email" placeholder="Ingrese su email">
-            <span class="error" id="errorEmail"></span>
+            
+            <div class="total-carrito">
+                <h3 class="total">
+                    Total: <span id="total-carrito">$0</span>
+                </h3>
+            </div>
 
-            <label for="mensaje">Mensaje</label>
-            <textarea name="message" id="mensaje" placeholder="Escriba su mensaje" rows="4" cols="50"></textarea>
-            <span class="error" id="errorMensaje"></span>
+            <button id="vaciar-carrito">Vaciar carrito</button>
+            <button id="finalizar-compra">Finalizar Compra</button>
 
-            <button type="submit" id="btnEnviar">Enviar</button>
+            <div id="modal" class="modal">
+                <div class="modal-contenido">
+                    <p>El carrito se ha vaciado.</p>
+                    <button id="cerrarModal">Aceptar</button>
+                </div>
+            </div>
 
-            </form>
+            <div id="modal-compra" class="modal">
+                <div class="modal-contenido">
+                    <p>Gracias por realizar tu compra!</p>
+                    <button id="cerrarModalCompra">Aceptar</button>
+                </div>
+            </div>
 
         </div>
 
-
     </main>
-
 
 
     <!--------- Footer ---------->
@@ -87,8 +108,7 @@
     </footer>
     
     <!--------- JavaScript ---------->
-    <script src="../js/productos.js"></script>
+    <script src="../js/carrito.js"></script>
     <script src="../js/script.js"></script>
-    <script src="../js/contacto.js"></script>
 </body>
 </html>

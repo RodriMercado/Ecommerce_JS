@@ -24,7 +24,7 @@ main {
 }
 
 header{
-    background-color: #557ed6;
+    background-color: #23304d;
 }
 
 .header{
@@ -39,26 +39,18 @@ header{
 footer{
     padding: 20px;
     text-align: center;
-    background-color: #557ed6;
-    color: white;
+    background-color: #23304d;
+    color: rgba(255, 255, 255, 0.548);
 }
-
 
 /* Menu de Navegacion*/
-.logo{
-    width: 70px;
-
-}
 nav ul {
     display: flex;
     align-items: center;
     list-style-type: none;
     gap: 20px;
 }
-nav li {
-    display: inline; 
-    
-}
+
 
 nav a{
     color: white;
@@ -66,19 +58,21 @@ nav a{
 }
 
 nav a:hover{
-    color: #314268;
+    color: #4b6396;
 }
 
-li .hamburguesa{
+.hamburguesa, 
+.cerrar{
     display: none;
     color: white;
 }
 
+
 /* Seccion Bienvenida */
 .bienvenido {
+    background-color: #23304d;
     text-align: center;
     justify-content: center;
-    background: linear-gradient(to bottom,  #557ed6, #7195e2,#8dacee);
     color: white;
     padding: 100px 20px;
 }
@@ -115,6 +109,13 @@ li .hamburguesa{
     font-size: 12px;
 }
 
+.cards{
+    transition: 0.4s;
+}
+.cards:hover{
+    transform: scale(1.03);
+}
+
 .titulo-producto{
     font-size: 18px;
 }
@@ -128,7 +129,7 @@ li .hamburguesa{
 
 .card-producto{
     align-items: center;
-    border: 1px solid #314268;
+    background-color: #23304d1f;
     max-width: 270px;
     height: 450px;
     padding: 10px;
@@ -163,6 +164,41 @@ li .hamburguesa{
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 14px;
+}
+
+.texto-introduccion{
+    max-width: 700px;
+    min-height: 300px;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #e6e6e6;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    text-align: center;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #555;
+}
+
+.ver-productos{
+    display: inline-block;
+    align-self: center;
+    padding: 12px 24px;
+    background-color: #314268;
+    color: #fff;
+    text-decoration: none;
+
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.ver-productos:hover{
+    background-color: #23304d;
+    transform: scale(1.03);
 }
 
 .reviews-container{
@@ -217,22 +253,22 @@ li .hamburguesa{
 
 .carrito{
     color: #ffffff;
-    background-color: #557ed6;
-    padding: 0.5rem;
+    background-color: #314268;
+    padding: 0.75rem;
     border: none;
     border-radius: 10px;
     
 }
 
 .carrito:hover{
-    background-color: #799deb;
+    background-color: #23304d;
 }
 
 
 /* Imagenes */
 .logo{
-    width: 70px;
-    color: white;
+    padding: 10px;
+    width: 200px;
 }
 
 .imagenes{
@@ -247,11 +283,21 @@ li .hamburguesa{
 /* Responsive */
 
 @media only screen and (max-width: 1024px){
-    *{
-        box-sizing: border-box;
-    }
     .header{
         font-size: 16px;
+    }
+    
+    h1{
+        font-size: 24px;
+    }
+    
+    .texto-introduccion{
+        font-size: 16px;
+    }
+
+    .logo {
+        padding: 10px;
+        width: 200px;
     }
     .titulo-producto{
         font-size: 14px;
@@ -261,12 +307,61 @@ li .hamburguesa{
 
     }
 
-    li .hamburguesa{
+    .hamburguesa, 
+    .cerrar{
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 2rem;
+        color: white;
+    }
+
+    /* Menu Hamburguesa */
+    .hamburguesa{
         display: flex;
         align-items: center;
-        margin: 0 auto;
-        padding: 0 20px;
+        justify-content: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: white;
+        font-size: 2rem;
+        padding: 0;
+        font-size: 20px;
     }
+
+    .nav{
+        display: flex;
+        z-index:1000;
+        opacity: 0;
+        visibility: hidden;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: fixed;
+        width: 300px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #161f33;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        transition: opacity .3s ease, visibility .3s ease;
+    }
+
+    .nav-visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list{
+        flex-direction: column;
+        align-items: end;
+        padding: 2rem;
+        text-align: end;
+    }
+
     .card-producto{
         height: 450px;
     }
@@ -277,6 +372,10 @@ li .hamburguesa{
 
     .bienvenido{
         padding: 60px 15px;
+    }
+
+    nav a:hover{
+        color: #7195e2;
     }
 
     /* Reseñas */
@@ -289,14 +388,43 @@ li .hamburguesa{
     }
 }
 
+.icono-carrito{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+#contador-carrito{
+    position: absolute;
+    top: -8px;
+    right: -10px;
+
+    width: 18px;
+    height: 18px;
+
+    background-color: #161f33;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 11px;
+    font-weight: bold;
+}
 
 @media only screen and (max-width: 768px){
-    *{
-        box-sizing: border-box;
-    }
     .header{
         font-size: 16px;
     }
+
+    .logo {
+        padding: 10px;
+        width: 200px;
+    }
+
     .titulo-producto{
         font-size: 14px;
     }
@@ -304,11 +432,9 @@ li .hamburguesa{
         grid-template-columns: repeat(2, 1fr);
 
     }
-    li .hamburguesa{
+    .hamburguesa{
         display: flex;
         align-items: center;
-        margin: 0 auto;
-        padding: 0 20px;
     }
     .card-producto{
         height: 450px;
@@ -321,6 +447,14 @@ li .hamburguesa{
     .bienvenido{
         font-size: 14px;
         padding: 60px 15px;
+    }
+
+    h1{
+        font-size: 24px;
+    }
+
+    .texto-introduccion{
+        font-size: 16px;
     }
 
     /* Reseñas */

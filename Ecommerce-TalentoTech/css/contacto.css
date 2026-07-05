@@ -7,7 +7,7 @@
 .contacto{
     display: grid;
     justify-items: center;
-    background: linear-gradient(to bottom,  #557ed6, #7195e2,#8dacee);
+    background-color: #23304d;
     color: white;
     padding: 50px 20px;
 }
@@ -20,7 +20,7 @@
 }
 
 .formulario{
-    background-color:#d3dbec;
+    background-color: #ebebeb;
     max-width: 500px;
     margin: 40px auto;
     padding: 20px;
@@ -60,16 +60,23 @@
     margin-top: 20px;
     padding: 12px;
     border: none;
-    background-color: #557ed6;
+    background-color: #314268;
     color: white;
     border-radius: 6px;
     cursor: pointer;
 }
 .formulario button:hover{
     color: white;
-    background-color: #799deb;
+    background-color:  #23304d;
 
 }
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 4px;
+    display: block;
+}
+
 
 
 @media only screen and (max-width: 1024px) {
