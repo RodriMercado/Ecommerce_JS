@@ -280,73 +280,89 @@ nav a:hover{
 }
 
 
-/* Responsive */
+/* =========================
+   Responsive - 1024px
+========================= */
 
 @media only screen and (max-width: 1024px){
+
     .header{
         font-size: 16px;
     }
-    
+
     h1{
         font-size: 24px;
     }
-    
+
+    .logo{
+        width: 200px;
+        padding: 10px;
+    }
+
     .texto-introduccion{
         font-size: 16px;
     }
 
-    .logo {
-        padding: 10px;
-        width: 200px;
+    .texto-producto{
+        margin: 20px;
     }
+
+    .bienvenido{
+        padding: 60px 15px;
+    }
+
     .titulo-producto{
         font-size: 14px;
     }
+
     .productos{
         grid-template-columns: repeat(3, 1fr);
-
     }
 
-    .hamburguesa, 
+    .card-producto{
+        height: 450px;
+    }
+
+    /* Menú hamburguesa */
+
+    .hamburguesa,
     .cerrar{
         display: block;
         background: none;
         border: none;
         cursor: pointer;
-        font-size: 2rem;
         color: white;
     }
 
-    /* Menu Hamburguesa */
     .hamburguesa{
         display: flex;
         align-items: center;
         justify-content: center;
-        background: none;
-        border: none;
-        cursor: pointer;
-        color: white;
-        font-size: 2rem;
-        padding: 0;
         font-size: 20px;
+        padding: 0;
     }
 
     .nav{
         display: flex;
-        z-index:1000;
-        opacity: 0;
-        visibility: hidden;
         flex-direction: column;
         align-items: end;
         gap: 1rem;
+
         position: fixed;
-        width: 300px;
         top: 0;
         right: 0;
         bottom: 0;
-        background-color: #161f33;
+
+        width: 300px;
         padding: 2rem;
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+
+        background-color: #161f33;
+        box-shadow: 0 0 0 100vmax rgba(0,0,0,.5);
+
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1000;
+
         transition: opacity .3s ease, visibility .3s ease;
     }
 
@@ -358,112 +374,85 @@ nav a:hover{
     .nav-list{
         flex-direction: column;
         align-items: end;
-        padding: 2rem;
         text-align: end;
-    }
-
-    .card-producto{
-        height: 450px;
-    }
-
-    .texto-producto{
-        margin: 20px;
-    }
-
-    .bienvenido{
-        padding: 60px 15px;
+        padding: 2rem;
     }
 
     nav a:hover{
         color: #7195e2;
     }
 
-    /* Reseñas */
+    /* Reviews */
+
     .testimonio{
         padding: 20px;
         font-size: 24px;
     }
+
     .reviews-container{
         grid-template-columns: repeat(2,1fr);
     }
 }
 
-.icono-carrito{
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-}
 
-#contador-carrito{
-    position: absolute;
-    top: -8px;
-    right: -10px;
-
-    width: 18px;
-    height: 18px;
-
-    background-color: #161f33;
-    color: white;
-
-    border-radius: 50%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 11px;
-    font-weight: bold;
-}
+/* =========================
+   Responsive - 768px
+========================= */
 
 @media only screen and (max-width: 768px){
-    .header{
-        font-size: 16px;
+
+    .productos{
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .logo {
+    .bienvenido{
+        font-size: 14px;
+    }
+
+    .reviews-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================
+   Responsive - 480px
+========================= */
+
+@media only screen and (max-width: 480px){
+
+    .productos{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .card-producto{
+        width: 100%;
+        max-width: 180px;
+        min-height: 390px;
         padding: 10px;
-        width: 200px;
+    }
+
+    .imagenes{
+        width: 140px;
+        height: 140px;
     }
 
     .titulo-producto{
         font-size: 14px;
     }
-    .productos{
-        grid-template-columns: repeat(2, 1fr);
 
-    }
-    .hamburguesa{
-        display: flex;
-        align-items: center;
-    }
-    .card-producto{
-        height: 450px;
+    .cards .descripcion{
+        font-size: 11px;
     }
 
-    .texto-producto{
-        margin: 20px;
-    }
-
-    .bienvenido{
-        font-size: 14px;
-        padding: 60px 15px;
-    }
-
-    h1{
-        font-size: 24px;
-    }
-
-    .texto-introduccion{
+    .precio{
         font-size: 16px;
     }
 
-    /* Reseñas */
-    .testimonio{
-        padding: 20px;
-        font-size: 24px;
-    }
-    .reviews-container{
-        grid-template-columns: repeat(1,1fr);
+    .carrito{
+        width: 100%;
+        font-size: 14px;
     }
 }
-
