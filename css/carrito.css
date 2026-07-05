@@ -169,13 +169,15 @@ th{
 
 }
 
-@media only screen and (max-width: 1024px){
-    
-    .carrito-container {
-        width: 95%;
-        margin: 0 auto;
 
+/* Responsive */
+
+@media (max-width: 1024px){
+
+    .carrito-container{
+        padding: 15px;
     }
+
     table{
         font-size: 14px;
     }
@@ -184,38 +186,71 @@ th{
     td{
         padding: 8px;
     }
+
     .total{
-        font-size: 12px;
+        font-size: 14px;
     }
+
     button{
-        font-size: 12px;
-        padding: 5px 10px;
+        font-size: 13px;
+        padding: 8px 10px;
     }
+
 }
 
 @media (max-width: 768px){
 
-    .carrito-container {
-
-        width: 95%;
-        margin: 0 auto;
-
-    }
-
     table{
-        font-size: 14px;
+        min-width: 650px;
+        font-size: 13px;
     }
 
     th,
     td{
-        padding: 8px;
+        padding: 6px;
     }
-    .total{
 
+    .total-carrito{
+        font-size: 16px;
+    }
+
+    #mensaje-vacio{
+        width: 100%;
+        max-width: 350px;
+        height: 300px;
+    }
+
+}
+
+@media (max-width: 480px){
+
+    h2{
+        padding: 30px 10px;
+        font-size: 22px;
+    }
+
+    table{
+        min-width: 600px;
         font-size: 12px;
     }
-    button{
-        font-size: 12px;
-        padding: 5px 10px;
+
+    th,
+    td{
+        padding: 5px;
     }
+
+    .btn-eliminar{
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+
+    .total-carrito{
+        font-size: 14px;
+    }
+
+    .modal-contenido{
+        width: 90%;
+        padding: 20px;
+    }
+
 }
