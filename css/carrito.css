@@ -1,7 +1,6 @@
 .carrito-container{
+    justify-content: center;
     text-align: center;
-    padding: 20px;
-    overflow-x: auto;
 }
 
 h2{
@@ -10,26 +9,24 @@ h2{
 }
 
 table{
-    width: 100%;
     text-align: center;
     margin: 50px auto 0;
     border-collapse: collapse;
 }
 
-th,
-td{
+th, td {
     padding: 10px 20px;
     text-align: center;
 }
 
 th{
-    background-color: #000;
+    background-color: #000000;
     color: white;
 }
 
 #finalizar-compra{
     background-color: #314268;
-    color: white;
+    color: #ffffff;
     padding: 10px;
     border: none;
     border-radius: 7px;
@@ -40,7 +37,7 @@ th{
 }
 
 #vaciar-carrito{
-    color: white;
+    color: #ffffff;
     background-color: #c90c05;
     margin: 20px;
     padding: 10px;
@@ -63,15 +60,14 @@ th{
     border-radius: 10px;
     width: 400px;
     height: 400px;
-    margin: 0 auto;
 }
 
 .icon-carrito{
     font-size: 75px;
-    color: #000;
+    color: #000000;
 }
 
-.btn-eliminar{
+.btn-eliminar {
     background: #e53935;
     color: white;
     border: none;
@@ -80,33 +76,33 @@ th{
     cursor: pointer;
 }
 
-.btn-eliminar:hover{
+.btn-eliminar:hover {
     background: #c62828;
 }
 
-#carrito{
-    width: 100%;
+#carrito {
+    width: fit-content;
     margin: 0 auto;
 }
 
 .total{
     font-size: 16px;
-    background-color: #000;
+    background-color: #000000;
     padding: 10px;
     border-radius: 7px;
     color: white;
 }
 
-.total-carrito{
+.total-carrito {
     display: flex;
     justify-content: flex-end;
     margin-top: 15px;
     gap: 10px;
     font-size: 20px;
-    color: #000;
+    color: rgb(0, 0, 0);
 }
 
-.total-carrito h3{
+.total-carrito h3 {
     margin: 0;
 }
 
@@ -162,80 +158,74 @@ th{
         opacity: 0;
         transform: scale(.9);
     }
-
     to{
         opacity: 1;
         transform: scale(1);
     }
 }
 
-/* =========================
-   Responsive - 1024px
-========================= */
+/* Responsive */
 
-@media (max-width: 1024px){
+@media only screen and (max-width: 1024px){
 
-    .carrito-container{
-        padding: 15px;
+    .carrito-container {
+        width: 95%;
+        margin: 0 auto;
     }
 
     table{
         font-size: 14px;
     }
 
-    th,
-    td{
+    th, td{
         padding: 8px;
     }
 
     .total{
-        font-size: 14px;
+        font-size: 12px;
     }
 
-    #vaciar-carrito,
-    #finalizar-compra,
-    .btn-eliminar{
-        font-size: 13px;
-        padding: 8px 10px;
+    button{
+        font-size: 12px;
+        padding: 5px 10px;
     }
 }
-
-/* =========================
-   Responsive - 768px
-========================= */
 
 @media (max-width: 768px){
 
+    .carrito-container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
     table{
-        min-width: 650px;
-        font-size: 13px;
+        font-size: 14px;
     }
 
-    th,
-    td{
-        padding: 6px;
+    th, td{
+        padding: 8px;
     }
 
-    .total-carrito{
-        font-size: 16px;
+    .total{
+        font-size: 12px;
     }
 
-    #mensaje-vacio{
-        width: 100%;
-        max-width: 350px;
-        height: 300px;
+    button{
+        font-size: 12px;
+        padding: 5px 10px;
     }
 }
 
-/* =========================
-   Responsive - 480px
-========================= */
-
-@media (max-width: 480px){
+@media only screen and (max-width: 480px){
 
     h2{
+        padding: 25px 10px;
         font-size: 22px;
-        padding: 30px 10px;
+    }
+
+    .carrito-container{
+        width: 100%;
+        overflow-x: auto;
     }
 
     table{
@@ -243,31 +233,29 @@ th{
         font-size: 12px;
     }
 
-    th,
-    td{
+    th, td{
         padding: 5px;
     }
 
-    .btn-eliminar{
-        padding: 6px 8px;
-        font-size: 11px;
-    }
-
-    .total-carrito{
+    #mensaje-vacio{
+        width: 90%;
+        height: auto;
         font-size: 14px;
     }
 
-    .modal-contenido{
-        width: 90%;
-        padding: 20px;
-    }
-
-    #mensaje-vacio{
-        max-width: 300px;
-        height: 250px;
-    }
-
     .icon-carrito{
-        font-size: 60px;
+        font-size: 55px;
+    }
+
+    .total-carrito{
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    #finalizar-compra,
+    #vaciar-carrito{
+        width: 100%;
+        max-width: 250px;
     }
 }
